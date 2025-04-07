@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coursera JavaScript Essentials Final Project Javier AM</title>
+        <link rel="stylesheet" href="travel_recommendation.css"> 
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><img src="travel_recommendation_logo.png" id="logo"></li>
+                <li class="nav-center">
+                    <ul class="nav-links">
+                        <li><a href="travel_recommendation.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="contact_us.html">Contact us</a></li>
+                    </ul>
+                </li>
+                <li class="search_bar" id="searchBar" style="visibility: hidden">
+                    <input type="search" placeholder="Enter a destination or keyword" id="search">
+                    <ul class="search_btn_ul">
+                        <li><a id="magnifier_btn"><img src="search.png" id="magnifier"></a></li>
+                        <li><button type="click" id="search_btn">Search </button></li>
+                        <li><button type="click" id="clear_btn">Clear</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="maindiv">
+            <div class="left">
+                <div class="vbar"></div>
+                <ul class="iconlist">
+                    <li><img src="twitter-x.png"></li>
+                    <li><img src="fb.png"></li>
+                    <li><img src="ig.png"></li>
+                    <li><img src="yt.png"></li>
+                </ul>
+            </div>
+            <div class="right-c">
+                <div class="contact-div">
+                    <h1 class="wh1">CONTACT US</h1>
+                    <p class="txtcontactus">Get in Touch.</p>
+                </div>
+                <div class="form-div">
+                    <form id="contact-form">
+                        <label for="name">Name<br></label>
+                        <input type="text" id="name"><br>
+                        <label for="email">Email<br></label>
+                        <input type="email" id="email"><br>
+                        <label for="message">Message<br></label>
+                        <textarea id="message" name="message" rows="6"></textarea>
+                        <input type="submit" id="submit">
+                    </form>
+                </div>
+            </div>
+        </div>        
+        <script src="travel_recommendation.js"></script>
+    </body>
+</html>

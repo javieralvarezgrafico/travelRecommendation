@@ -240,3 +240,71 @@ button:hover {
     padding: 10px 30px;
     text-align: center;
 }
+
+/* CONTACT */
+.right-c {
+    width: 85%;
+    padding-top: 40vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-div {
+    width: 42.5%;
+    height: 57.25%;
+}
+
+.form-div {
+    width: 42.5%;
+    height: 57.25%;
+}
+
+.txtcontactus {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: white;
+}
+
+#contact-form {
+    background: rgba(33, 33, 33, 0.2);
+    padding: 1em;
+    border-radius: 12px;
+}
+
+label {
+    font-size: 1.75em;
+    font-family: sans-serif;
+    color: white;
+    font-weight: light;
+}
+
+#name, #email, #message {
+    font-size: 1.25em;
+    font-family: sans-serif;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 12px;
+    width: calc(100% - 0.5em);
+    margin: 1em 0em 1em 0em;
+}
+
+#name, #email {
+    height: 3em;
+}
+
+#submit {
+    background-color: #214e50;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 30px;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+}
+
+#submit:hover {
+    background-color: #376c6e;
+    cursor: pointer;
+}
