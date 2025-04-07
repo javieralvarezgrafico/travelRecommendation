@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -98,3 +102,68 @@ button:hover {
 .hidden {
     visibility: hidden;
 }
+
+/* HOME */
+.maindiv {
+    background: linear-gradient(
+            to right,
+            rgba(9, 95, 88, 1),
+            rgba(72, 190, 180, 0)
+        ),
+        url("home-img.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 90px;
+    display: flex;
+    position: relative;
+}
+
+.left {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0;
+}
+
+.vbar {
+    height: 60%;
+    width: 2px;
+    background-color: white;
+    margin-left: 60px;
+    margin-bottom: 20%;
+}
+
+.iconlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+}
+
+.iconlist li {
+    list-style-type: none;
+}
+
+.iconlist li img {
+    width: 40px;
+}
+
+.right {
+    width: 85%;
+    padding-top: 8em;
+}
+
+.wh1 {
+    font-size: 6em;
+    font-family: sans-serif;
+    color: white;
+}
+
+.txtp {
+    width: 33%;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: white;
+}
+
