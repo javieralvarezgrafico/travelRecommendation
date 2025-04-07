@@ -1,0 +1,91 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #0c1f1f, #376c6e, rgba(92, 155, 156, 0));
+    z-index: 1000;
+    padding: 10px 0;
+    height: 80px;
+}
+  
+.navbar > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.navbar > ul > li {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 180px;
+    margin: 10px 0 10px 10px;
+}
+
+/* Center links */
+.nav-center .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-center .nav-links > li > a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.nav-center .nav-links > li > a:hover {
+    color: lightblue;
+}
+
+.search_bar {
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    visibility: visible; /* Establecer por defecto como visible */
+}
+
+#search {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 400px;
+}
+
+.search_btn_ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+button {
+    background-color: #214e50;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+}
+
+button:hover {
+    background-color: #376c6e;
+    cursor: pointer;
+}
+
+/* Clase para ocultar la search_bar sin afectar el layout */
+.hidden {
+    visibility: hidden;
+}
