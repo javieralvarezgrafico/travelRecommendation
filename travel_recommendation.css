@@ -55,6 +55,15 @@
     visibility: visible; /* Establecer por defecto como visible */
 }
 
+#magnifier {
+    width: 24px;
+    padding-top: 4px;
+}
+
+#magnifier:hover {
+    cursor: pointer;    
+}
+
 #search {
     border: none;
     outline: none;
