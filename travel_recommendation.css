@@ -272,14 +272,14 @@ button:hover {
 }
 
 label {
-    font-size: 1.75em;
+    font-size: 1.25em;
     font-family: sans-serif;
     color: white;
     font-weight: light;
 }
 
 #name, #email, #message {
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: sans-serif;
     background-color: transparent;
     border: 1px solid white;
@@ -295,13 +295,13 @@ label {
 #submit {
     background-color: #214e50;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     padding: 10px 30px;
     font-family: sans-serif;
     text-align: center;
     width: 100%;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 #submit:hover {
