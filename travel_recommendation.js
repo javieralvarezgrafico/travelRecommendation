@@ -63,3 +63,96 @@ function searchRecommendation() {
             break;
     }
 }
+
+function showRecommendations(term) {
+    const card_one = document.getElementById("card1");
+    const card_two = document.getElementById("card2");
+    const gb = document.getElementById("greenbar")
+    card_one.classList.add("hidden");
+    card_two.classList.add("hidden");
+    gb.classList.add("hidden");
+    gb.classList.remove("visible");
+    card_one.classList.remove("visible");
+    card_two.classList.remove("visible");
+
+    if (term === "beach") {
+        card_one.innerHTML = '';
+        card_two.innerHTML = '';
+
+        const beaches = jsonData.beaches;
+
+        beaches.forEach((beach, index) => {
+            const card = index === 0 ? card_one : card_two;
+            const cardHTML = `
+                <div class="card-image" style="background-image: url('${beach.imageUrl}'); background-size: cover; height: 200px;"></div>
+                <div class="card-content" style="background-color: white; padding: 20px;">
+                    <h3>${beach.name}</h3>
+                    <p>${beach.description}</p>
+                    <button class="visit_btn">Visit</button>
+                </div>
+            `;
+            card.innerHTML += cardHTML;
+        });
+        addVisible(gb, card_one, card_two);
+
+    } else if (term === "temple") {
+        card_one.innerHTML = '';
+        card_two.innerHTML = '';
+
+        const temples = jsonData.temples;
+
+        temples.forEach((temple, index) => {
+            const card = index === 0 ? card_one : card_two;
+            const cardHTML = `
+                <div class="card-image" style="background-image: url('${temple.imageUrl}'); background-size: cover; height: 200px;"></div>
+                <div class="card-content" style="background-color: white; padding: 20px;">
+                    <h3>${temple.name}</h3>
+                    <p>${temple.description}</p>
+                    <button class="visit_btn">Visit</button>
+                </div>
+            `;
+            card.innerHTML = cardHTML;
+        });
+        addVisible(gb, card_one, card_two);
+
+    } else if (term === "country") {
+        card_one.innerHTML = '';
+        card_two.innerHTML = '';
+
+        const countries = jsonData.countries;
+
+        countries.forEach((country, index) => {
+            const card = index === 0 ? card_one : card_two;
+            const cardHTML = `
+                <div class="card-image" style="background-image: url('${country.imageUrl}'); background-size: cover; height: 200px;"></div>
+                <div class="card-content" style="background-color: white; padding: 20px;">
+                    <h3>${country.name}</h3>
+                    <p>${country.description}</p>
+                    <button class="visit_btn">Visit</button>
+                </div>
+            `;
+            card.innerHTML = cardHTML;
+        });
+        addVisible(gb, card_one, card_two);
+    }  else {
+        addHidden(gb, card_one, card_two);
+    }
+}
+
+function addVisible(gb, c1, c2) {
+    gb.classList.add("visible");
+    c1.classList.add("visible");
+    c2.classList.add("visible");
+    gb.classList.remove("hidden");
+    c1.classList.remove("hidden");
+    c2.classList.remove("hidden");
+}
+
+function addHidden() {
+    gb.classList.remove("visible");
+    c1.classList.remove("visible");
+    c2.classList.remove("visible");
+    gb.classList.add("hidden");
+    c1.classList.add("hidden");
+    c2.classList.add("hidden");
+}

@@ -308,3 +308,31 @@ label {
     background-color: #376c6e;
     cursor: pointer;
 }
+
+/* RECOMMENDATIONS */
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#search_card {
+    position: absolute;
+    width: 33%;
+    left: 60%;
+    top: 10%;
+}
+
+#greenbar {
+    background-color: rgba(9, 95, 88);
+    border-radius: 10px;
+    height: 2em;
+    width: 100%;
+    position: relative;
+}
+
+.card-image {
+    background-position: top;
+}
