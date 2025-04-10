@@ -345,7 +345,6 @@ label {
 .card-image {
     background-position: top;
     background-size: cover;
-    border-radius: 6px;
     overflow: hidden;
     height: 200px;
 }

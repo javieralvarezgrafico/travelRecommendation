@@ -65,9 +65,12 @@ function searchRecommendation() {
 }
 
 function showRecommendations(term) {
+    const searchCard = document.getElementById("search_card");
     const card_one = document.getElementById("card1");
     const card_two = document.getElementById("card2");
-    const gb = document.getElementById("greenbar")
+    const gb = document.getElementById("greenbar");
+
+    searchCard.style.visibility = "hidden";
     card_one.style.visibility = "hidden";
     card_two.style.visibility = "hidden";
     gb.style.visibility = "hidden";
@@ -90,6 +93,7 @@ function showRecommendations(term) {
             `;
             card.innerHTML += cardHTML;
         });
+        searchCard.style.visibility = "visible";
         card_one.style.visibility = "visible";
         card_two.style.visibility = "visible";
         gb.style.visibility = "visible";
@@ -112,6 +116,7 @@ function showRecommendations(term) {
             `;
             card.innerHTML = cardHTML;
         });
+        searchCard.style.visibility = "visible";
         card_one.style.visibility = "visible";
         card_two.style.visibility = "visible";
         gb.style.visibility = "visible";
@@ -137,12 +142,32 @@ function showRecommendations(term) {
                 card.innerHTML = cardHTML;
             });
         });
+        searchCard.style.visibility = "visible";
         card_one.style.visibility = "visible";
         card_two.style.visibility = "visible";
         gb.style.visibility = "visible";
     }  else {
+        searchCard.style.visibility = "hidden";
         card_one.style.visibility = "hidden";
         card_two.style.visibility = "hidden";
         gb.style.visibility = "hidden";
     }
+}
+
+// Clear button
+document.getElementById("clear_btn").addEventListener("click", function() {
+    clearSearch();
+});
+
+function clearSearch() {
+    const searchCard = document.getElementById("search_card");
+    const card_one = document.getElementById("card1");
+    const card_two = document.getElementById("card2");
+    const gb = document.getElementById("greenbar");
+
+    document.getElementById("search").value = "";
+    searchCard.style.visibility = "hidden";
+    card_one.style.visibility = "hidden";
+    card_two.style.visibility = "hidden";
+    gb.style.visibility = "hidden";
 }
