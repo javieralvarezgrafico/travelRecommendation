@@ -64,6 +64,18 @@ function searchRecommendation() {
     }
 }
 
+function getTimeInZone(timeZone) {
+    const options = { 
+        timeZone: timeZone, 
+        hour12: true, 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric' 
+    };
+    const time = new Date().toLocaleTimeString('en-US', options);
+    return time;
+}
+
 function showRecommendations(term) {
     const searchCard = document.getElementById("search_card");
     const card_one = document.getElementById("card1");
@@ -83,16 +95,21 @@ function showRecommendations(term) {
 
         beaches.forEach((beach, index) => {
             const card = index === 0 ? card_one : card_two;
+            // Obtener la hora local usando la zona horaria de cada playa
+            const timeInZone = getTimeInZone(beach.timeZone);
+
             const cardHTML = `
                 <div class="card-image" style="background-image: url('${beach.imageUrl}');"></div>
                 <div class="card-content">
                     <h3>${beach.name}</h3>
                     <p>${beach.description}</p>
+                    <p>Current Time: ${timeInZone}</p> <!-- Hora local de la playa -->
                     <button class="visit_btn">Visit</button>
                 </div>
             `;
             card.innerHTML += cardHTML;
         });
+
         searchCard.style.visibility = "visible";
         card_one.style.visibility = "visible";
         card_two.style.visibility = "visible";
@@ -106,16 +123,21 @@ function showRecommendations(term) {
 
         temples.forEach((temple, index) => {
             const card = index === 0 ? card_one : card_two;
+            // Obtener la hora local usando la zona horaria de cada templo
+            const timeInZone = getTimeInZone(temple.timeZone);
+
             const cardHTML = `
                 <div class="card-image" style="background-image: url('${temple.imageUrl}');"></div>
                 <div class="card-content">
                     <h3>${temple.name}</h3>
                     <p>${temple.description}</p>
+                    <p>Current Time: ${timeInZone}</p> <!-- Hora local del templo -->
                     <button class="visit_btn">Visit</button>
                 </div>
             `;
             card.innerHTML = cardHTML;
         });
+
         searchCard.style.visibility = "visible";
         card_one.style.visibility = "visible";
         card_two.style.visibility = "visible";
@@ -130,23 +152,27 @@ function showRecommendations(term) {
         countries.forEach((country, index) => {
             country.cities.forEach((city, cityIndex) => {
                 const card = (cityIndex === 0 || cityIndex % 2 === 0) ? card_one : card_two;
-    
+                // Obtener la hora local usando la zona horaria de la ciudad
+                const timeInZone = getTimeInZone(city.timeZone);
+
                 const cardHTML = `
                     <div class="card-image" style="background-image: url('${city.imageUrl}');"></div>
                     <div class="card-content">
                         <h3>${city.name}</h3>
                         <p>${city.description}</p>
+                        <p>Current Time: ${timeInZone}</p> <!-- Hora local de la ciudad -->
                         <button class="visit_btn">Visit</button>
                     </div>
                 `;
                 card.innerHTML = cardHTML;
             });
         });
+
         searchCard.style.visibility = "visible";
         card_one.style.visibility = "visible";
         card_two.style.visibility = "visible";
         gb.style.visibility = "visible";
-    }  else {
+    } else {
         searchCard.style.visibility = "hidden";
         card_one.style.visibility = "hidden";
         card_two.style.visibility = "hidden";
