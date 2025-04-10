@@ -32,7 +32,6 @@ body {
     margin: 10px 0 10px 10px;
 }
 
-/* Center links */
 .nav-center .nav-links {
     display: flex;
     gap: 25px;
@@ -56,7 +55,7 @@ body {
     border-radius: 30px;
     padding: 10px;
     margin-right: 10px;
-    visibility: visible; /* Establecer por defecto como visible */
+    visibility: visible;
 }
 
 #magnifier {

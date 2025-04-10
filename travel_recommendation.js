@@ -44,7 +44,6 @@ function searchRecommendation() {
     // Obtener el valor del input y convertirlo a minúsculas para comparación
     const searchInput = document.getElementById("search").value.toLowerCase();
 
-    // Manejo de la búsqueda con switch
     switch (searchInput) {
         case "beach":
         case "beaches":
@@ -95,7 +94,6 @@ function showRecommendations(term) {
 
         beaches.forEach((beach, index) => {
             const card = index === 0 ? card_one : card_two;
-            // Obtener la hora local usando la zona horaria de cada playa
             const timeInZone = getTimeInZone(beach.timeZone);
 
             const cardHTML = `
@@ -123,7 +121,6 @@ function showRecommendations(term) {
 
         temples.forEach((temple, index) => {
             const card = index === 0 ? card_one : card_two;
-            // Obtener la hora local usando la zona horaria de cada templo
             const timeInZone = getTimeInZone(temple.timeZone);
 
             const cardHTML = `
@@ -152,7 +149,6 @@ function showRecommendations(term) {
         countries.forEach((country, index) => {
             country.cities.forEach((city, cityIndex) => {
                 const card = (cityIndex === 0 || cityIndex % 2 === 0) ? card_one : card_two;
-                // Obtener la hora local usando la zona horaria de la ciudad
                 const timeInZone = getTimeInZone(city.timeZone);
 
                 const cardHTML = `
